@@ -1,6 +1,9 @@
 const router = require('express').Router();
-const {ControllerLibrary} = require('../controllers/library-controller')
+const bookRouter = require('./book-routing');
+// const {ControllerLibrary} = require('../controllers/library-controller')
 
-router.get('/', ControllerLibrary.showAll)
+// router.get('/', ControllerLibrary.showAll)
+
+router.use(bookRouter);
 
 module.exports = router
